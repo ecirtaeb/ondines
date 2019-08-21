@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<title>RESIDENCE DES ONDINES</title>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>	
+	<link href="https://fonts.googleapis.com/css?family=Sniglet" rel="stylesheet"> 
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" crossorigin="anonymous">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="vues/css/ondines.css">
+	<link rel="stylesheet" type="text/css" href="vues/css/accueil.css">		
+</head>
+<body>
+	<header id="imgfond">
+		<div>
+			<nav id="menu">
+				<ul class="flex">
+					<li class="posrelative">
+						<a href="index.php">Accueil</a>
+					</li>
+					<li>
+						<a href="index.php?page=situation" id="navSituation">Situation/Accès</a>
+					</li>
+					<li>
+						<a href="index.php?page=tourisme" id="navTourisme">Activités/Tourisme</a>
+					</li>
+					<li>
+						<a href="index.php?page=contact" id="navContact">Nous contacter</a>
+					</li>
+				</ul>
+			</nav>
+			<h1 class="bold">Résidence Les Ondines</h1>
+			<h2>à 250 mètres de la plage</h2>
+			<form method="GET" class="flex" id="recherche" action="rechercheDispo.php">
+				<fieldset>
+					<label for="du">du : </label>
+					<input type="text" id="du" name="datdeb" class="du"  autocomplete="off">
+				</fieldset>
+				<fieldset>
+					<label for="au">au : </label>
+					<input type="text" id="au" name="datfin" class="au"  autocomplete="off">				
+				</fieldset>
+				<button type="button">Recherche disponibilités pour cette période</button>
+			</form>
+			<h3 id="icimsg"> </h3>
+			<a href="#" class="hidden btnrazdat lien">Effacer les dates</a>
+		</div>
+	</header>
+<main class="container" >
+	<div>
+		<div class="flex" id="main1">
+			<section class="diaporama">
+				<ul class="flex posrelative diapo">
+					<!-- Uniquement 10 photos de visibles en même temps -->
+					 
+													<li class="grandformat posrelative">
+								<button type="submit" class="diapoprec pointer"> &lt; </button>
+								<img src="vues/img/diapoaccueil/plage300m.jpg" alt="photo location">
+								<button type="submit" class="diaposuiv pointer"> &gt; </button>                         
+								<p class="legende">Plage à 250m de la résidence</p>
+							</li>
+												<li class="petitformat" data-id="0">
+							<img src= "vues/img/diapoaccueil/plage300m.jpg" alt="photo location">
+							<p class="hidden legende">Plage à 250m de la résidence</p>
+						</li>                   
+					 
+												<li class="petitformat" data-id="1">
+							<img src= "vues/img/diapoaccueil/ondines1.jpg" alt="photo location">
+							<p class="hidden legende">Les appartements - du studio au T2</p>
+						</li>                   
+					 
+												<li class="petitformat" data-id="2">
+							<img src= "vues/img/diapoaccueil/stD-2.JPG" alt="photo location">
+							<p class="hidden legende">Studio D</p>
+						</li>                   
+					 
+												<li class="petitformat" data-id="3">
+							<img src= "vues/img/diapoaccueil/studio-G.jpg" alt="photo location">
+							<p class="hidden legende">Studio G</p>
+						</li>                   
+					 
+												<li class="petitformat" data-id="4">
+							<img src= "vues/img/diapoaccueil/T2-C.jpg" alt="photo location">
+							<p class="hidden legende">T2 C - avec terrasse</p>
+						</li>                   
+					 
+												<li class="petitformat" data-id="5">
+							<img src= "vues/img/diapoaccueil/T2-H.jpg" alt="photo location">
+							<p class="hidden legende">T2 H</p>
+						</li>                   
+					 
+												<li class="petitformat" data-id="6">
+							<img src= "vues/img/diapoaccueil/T2-A.JPG" alt="photo location">
+							<p class="hidden legende">T2 A</p>
+						</li>                   
+					 
+												<li class="petitformat" data-id="7">
+							<img src= "vues/img/diapoaccueil/E-Salon-1.JPG" alt="photo location">
+							<p class="hidden legende">T2 E</p>
+						</li>                   
+					 
+												<li class="petitformat" data-id="8">
+							<img src= "vues/img/diapoaccueil/F-Salon-2.JPG" alt="photo location">
+							<p class="hidden legende">T2 F</p>
+						</li>                   
+					 
+												<li class="petitformat" data-id="9">
+							<img src= "vues/img/diapoaccueil/B-Salon-2.JPG" alt="photo location">
+							<p class="hidden legende">T2 B</p>
+						</li>                   
+										<!-- Les autres photos s'il en reste  sont cachées -->
+											<li class="petitformat hidden" data-id="10">
+							<img src= "vues/img/diapoaccueil/ondines2.jpg" alt="photo location">
+							<p class="legende">Maisons mitoyennes - T3</p>
+						</li>                   
+											<li class="petitformat hidden" data-id="11">
+							<img src= "vues/img/diapoaccueil/mI-1.jpg" alt="photo location">
+							<p class="legende">Maison mitoyenne I - avec terrasse</p>
+						</li>                   
+											<li class="petitformat hidden" data-id="12">
+							<img src= "vues/img/diapoaccueil/mJ-1.jpg" alt="photo location">
+							<p class="legende">Maison mitoyenne J - avec terrasse</p>
+						</li>                   
+					       
+				</ul>
+			</section>
+			<aside class="flex">
+				<section id="localisation" class="flex1">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d689793.3787226885!2d-2.603654!3d47.519023!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x480ffc75685de5bb%3A0xf6a6acc568cd732!2sRue+des+Ondines%2C+56750+Damgan!5e0!3m2!1sfr!2sfr!4v1558798680595!5m2!1sfr!2sfr"  allowfullscreen>
+					</iframe>
+				</section>
+				<section id="presentation" >
+					<ul class="flex">
+						<li>
+							<img src="vues/img/pictos/plage.svg" class="picto" alt="picto plage">
+							<p> à 250 mètres de la plage </p>
+						</li>
+						<li>
+							<img src="vues/img/pictos/ville.svg" class="picto" alt="picto ville">
+							<p> 25 km de Vannes <br>
+								47 km d'Auray 
+							</p>
+						</li>
+						<li>
+							<img src="vues/img/pictos/train.svg" class="picto" alt="picto train">
+							<p> Gare TGV Vannes </p>
+						</li>
+						<li>
+							<img src="vues/img/pictos/avion.svg" class="picto" alt="picto avion">
+							<p> Aéroport Nantes Atlantique à 100 km</p>
+						</li>
+						<li>
+							<img src="vues/img/pictos/voiture.svg" class="picto voiture" alt="picto voiture">
+							<p> Depuis :   <br>
+								Paris - 5h <br>
+								Rennes - 1h20 <br>
+								Nantes - 1h10
+							</p>
+						</li>
+					</ul>                                       
+				</section>
+			</aside>
+		</div>
+		<section id="logements" class="containerbis posrelative">
+			<div id="listlogements">
+				<h2>Tous les logements de la Résidence des Ondines</h2>	
+<a id="gotodate" class="lien" href="#du">Saisir vos dates</a><a href="#" class="btnrazdat lien hidden">Effacer les dates</a>
+<table>
+			<thead>
+<!-- 			<tr class="flextablogement">
+				<th>Capacité</th>
+				<th colspan=4>Description</th>								
+				<th><i class="fa fa-envelope" aria-hidden="true"></i></th>
+			</tr> -->
+		</thead>
+		<tbody>
+								<tr class="flextablogement" data-id=A>
+				<td class="detail pointer none1" data-href="index.php?page=fiche&id=A">
+										<p> <i class="fas fa-user"></i> 6</p>
+				</td>
+				<td class="detail pointer" data-href="index.php?page=fiche&id=A">
+					<ul class="alignegauche liendetail" data-id=A >
+						<li class="titre">T2 étage A</li>
+						<li class="none3"> <i class="fas fa-user"></i> 6</li>
+             		<li>T2 au premier étage avec 1 chambre avec lit double, une mezzanine avec 2 lits simples, une cuisine ouverte sur un salon/séjour avec canapé convertible. Cellier au RdC.
+</li>								
+						<li>Surface utile 47.94 m²</li>
+						<li class="pictos">
+							<img src="vues/img/pictos/litdouble.svg" class="picto lit2" alt="picto lit double"><img src="vues/img/pictos/litsimple.svg" class="picto" alt="picto lit simple"><img src="vues/img/pictos/litsimple.svg" class="picto" alt="picto lit simple">							<img src="vues/img/pictos/wifilight.svg" class="picto" alt="picto wifi">
+							<img src="vues/img/pictos/parkinglight.svg" class="picto" alt="picto parking">
+						</li>
+					</ul>
+				</td>
+				<td class="detail pointer none1" data-href="index.php?page=fiche&id=A">
+					<img src="vues/img/diapoFiche/A/mini/T2AE-1.JPG"  alt="vignette"/>
+				</td>
+				<td class="detail pointer none2" data-href="index.php?page=fiche&id=A">
+					<img src="vues/img/diapoFiche/A/mini/T2AE-2.JPG"  alt="vignette"/>
+				</td>
+				<td class="pointer">
+					<ul class="flex-colonne" data-id=A>
+													<li class="tarif detail pointer" data-href="index.php?page=fiche&id=A">
+								<p>La semaine à partir de </p>
+								<p><span>290.00 €</span></p>
+							</li>
+							
+																					
+							<li class="dispo alien" data-href="index.php?page=dispo&id=A&src=vues/img/diapoFiche/A/mini/T2AE-1.JPG">Disponibilités</li>
+											</ul>
+				</td>
+				<td class="resa lien pointer none1" data-id=A>
+					<a class="lien" href="mailto:?to=beatrice@activimage.net&subject=Demande%20de%20réservation%20du%20logement%20A%20(date%20non%20précisée)&body=message%20:........%0D%0ANom%20:......%0D%0ANombre%20de%20personnes%20:%20..........">Demande
+					</a>
+				</td>
+			</tr>							 		
+								<tr class="flextablogement" data-id=B>
+				<td class="detail pointer none1" data-href="index.php?page=fiche&id=B">
+										<p> <i class="fas fa-user"></i> 4</p>
+				</td>
+				<td class="detail pointer" data-href="index.php?page=fiche&id=B">
+					<ul class="alignegauche liendetail" data-id=B >
+						<li class="titre">T2 étage B</li>
+						<li class="none3"> <i class="fas fa-user"></i> 4</li>
+             		<li>T2 au premier étage avec 1 chambre avec lit double, une mezzanine avec 2 lits simples, une kitchenette, un salon/séjour avec canapé convertible et coin repas</li>								
+						<li>Surface utile 45.10 m²</li>
+						<li class="pictos">
+							<img src="vues/img/pictos/litdouble.svg" class="picto lit2" alt="picto lit double"><img src="vues/img/pictos/litsimple.svg" class="picto" alt="picto lit simple"><img src="vues/img/pictos/litsimple.svg" class="picto" alt="picto lit simple">							<img src="vues/img/pictos/wifilight.svg" class="picto" alt="picto wifi">
+							<img src="vues/img/pictos/parkinglight.svg" class="picto" alt="picto parking">
+						</li>
+					</ul>
+				</td>
+				<td class="detail pointer none1" data-href="index.php?page=fiche&id=B">
+					<img src="vues/img/diapoFiche/B/mini/T2BF-1.jpg"  alt="vignette"/>
+				</td>
+				<td class="detail pointer none2" data-href="index.php?page=fiche&id=B">
+					<img src="vues/img/diapoFiche/B/mini/T2BF-2.jpg"  alt="vignette"/>
+				</td>
+				<td class="pointer">
+					<ul class="flex-colonne" data-id=B>
+													<li class="tarif detail pointer" data-href="index.php?page=fiche&id=B">
+								<p>La semaine à partir de </p>
+								<p><span>245.00 €</span></p>
+							</li>
+							
+																					
+							<li class="dispo alien" data-href="index.php?page=dispo&id=B&src=vues/img/diapoFiche/B/mini/T2BF-1.jpg">Disponibilités</li>
+											</ul>
+				</td>
+				<td class="resa lien pointer none1" data-id=B>
+					<a class="lien" href="mailto:?to=beatrice@activimage.net&subject=Demande%20de%20réservation%20du%20logement%20B%20(date%20non%20précisée)&body=message%20:........%0D%0ANom%20:......%0D%0ANombre%20de%20personnes%20:%20..........">Demande
+					</a>
+				</td>
+			</tr>							 		
+								<tr class="flextablogement" data-id=C>
+				<td class="detail pointer none1" data-href="index.php?page=fiche&id=C">
+										<p> <i class="fas fa-user"></i> 6</p>
+				</td>
+				<td class="detail pointer" data-href="index.php?page=fiche&id=C">
+					<ul class="alignegauche liendetail" data-id=C >
+						<li class="titre">T2 avec terrasse C</li>
+						<li class="none3"> <i class="fas fa-user"></i> 6</li>
+             		<li>Appartement T2, une chambre avec 2 lits doubles, cuisine ouvert sur salon avec 1 canapé convertible + terrasse de 30m²</li>								
+						<li>Surface utile 49.12 m²</li>
+						<li class="pictos">
+							<img src="vues/img/pictos/litdouble.svg" class="picto lit2" alt="picto lit double"><img src="vues/img/pictos/litdouble.svg" class="picto lit2" alt="picto lit double">							<img src="vues/img/pictos/wifilight.svg" class="picto" alt="picto wifi">
+							<img src="vues/img/pictos/parkinglight.svg" class="picto" alt="picto parking">
+						</li>
+					</ul>
+				</td>
+				<td class="detail pointer none1" data-href="index.php?page=fiche&id=C">
+					<img src="vues/img/diapoFiche/C/mini/T2C-1.jpg"  alt="vignette"/>
+				</td>
+				<td class="detail pointer none2" data-href="index.php?page=fiche&id=C">
+					<img src="vues/img/diapoFiche/C/mini/T2C-2.jpg"  alt="vignette"/>
+				</td>
+				<td class="pointer">
+					<ul class="flex-colonne" data-id=C>
+													<li class="tarif detail pointer" data-href="index.php?page=fiche&id=C">
+								<p>La semaine à partir de </p>
+								<p><span>373.00 €</span></p>
+							</li>
+							
+																					
+							<li class="dispo alien" data-href="index.php?page=dispo&id=C&src=vues/img/diapoFiche/C/mini/T2C-1.jpg">Disponibilités</li>
+											</ul>
+				</td>
+				<td class="resa lien pointer none1" data-id=C>
+					<a class="lien" href="mailto:?to=beatrice@activimage.net&subject=Demande%20de%20réservation%20du%20logement%20C%20(date%20non%20précisée)&body=message%20:........%0D%0ANom%20:......%0D%0ANombre%20de%20personnes%20:%20..........">Demande
+					</a>
+				</td>
+			</tr>							 		
+								<tr class="flextablogement" data-id=D>
+				<td class="detail pointer none1" data-href="index.php?page=fiche&id=D">
+										<p> <i class="fas fa-user"></i> 4</p>
+				</td>
+				<td class="detail pointer" data-href="index.php?page=fiche&id=D">
+					<ul class="alignegauche liendetail" data-id=D >
+						<li class="titre">Studio D</li>
+						<li class="none3"> <i class="fas fa-user"></i> 4</li>
+             		<li>Grand studio + terrasse attenante de 33m². Cuisine ouverte sur salon/séjour avec canapé convertible et coin nuit avec 1 lit double.</li>								
+						<li>Surface utile 30.45 m²</li>
+						<li class="pictos">
+							<img src="vues/img/pictos/litdouble.svg" class="picto lit2" alt="picto lit double">							<img src="vues/img/pictos/wifilight.svg" class="picto" alt="picto wifi">
+							<img src="vues/img/pictos/parkinglight.svg" class="picto" alt="picto parking">
+						</li>
+					</ul>
+				</td>
+				<td class="detail pointer none1" data-href="index.php?page=fiche&id=D">
+					<img src="vues/img/diapofiche/D/mini/stD-1.JPG"  alt="vignette"/>
+				</td>
+				<td class="detail pointer none2" data-href="index.php?page=fiche&id=D">
+					<img src="vues/img/diapofiche/D/mini/stD-2.JPG"  alt="vignette"/>
+				</td>
+				<td class="pointer">
+					<ul class="flex-colonne" data-id=D>
+													<li class="tarif detail pointer" data-href="index.php?page=fiche&id=D">
+								<p>La semaine à partir de </p>
+								<p><span>313.00 €</span></p>
+							</li>
+							
+																					
+							<li class="dispo alien" data-href="index.php?page=dispo&id=D&src=vues/img/diapofiche/D/mini/stD-1.JPG">Disponibilités</li>
+											</ul>
+				</td>
+				<td class="resa lien pointer none1" data-id=D>
+					<a class="lien" href="mailto:?to=beatrice@activimage.net&subject=Demande%20de%20réservation%20du%20logement%20D%20(date%20non%20précisée)&body=message%20:........%0D%0ANom%20:......%0D%0ANombre%20de%20personnes%20:%20..........">Demande
+					</a>
+				</td>
+			</tr>							 		
+								<tr class="flextablogement" data-id=E>
+				<td class="detail pointer none1" data-href="index.php?page=fiche&id=E">
+										<p> <i class="fas fa-user"></i> 6</p>
+				</td>
+				<td class="detail pointer" data-href="index.php?page=fiche&id=E">
+					<ul class="alignegauche liendetail" data-id=E >
+						<li class="titre">T2 étage E</li>
+						<li class="none3"> <i class="fas fa-user"></i> 6</li>
+             		<li>T2 au premier étage avec 1 chambre avec lit double, une mezzanine avec 2 lits simples, une cuisine ouverte sur un salon/séjour avec canapé convertible. Cellier au RdC.</li>								
+						<li>Surface utile 50.12 m²</li>
+						<li class="pictos">
+							<img src="vues/img/pictos/litdouble.svg" class="picto lit2" alt="picto lit double"><img src="vues/img/pictos/litsimple.svg" class="picto" alt="picto lit simple"><img src="vues/img/pictos/litsimple.svg" class="picto" alt="picto lit simple">							<img src="vues/img/pictos/wifilight.svg" class="picto" alt="picto wifi">
+							<img src="vues/img/pictos/parkinglight.svg" class="picto" alt="picto parking">
+						</li>
+					</ul>
+				</td>
+				<td class="detail pointer none1" data-href="index.php?page=fiche&id=E">
+					<img src="vues/img/diapofiche/E/mini/T2AE-1.JPG"  alt="vignette"/>
+				</td>
+				<td class="detail pointer none2" data-href="index.php?page=fiche&id=E">
+					<img src="vues/img/diapofiche/E/mini/T2AE-2.JPG"  alt="vignette"/>
+				</td>
+				<td class="pointer">
+					<ul class="flex-colonne" data-id=E>
+													<li class="tarif detail pointer" data-href="index.php?page=fiche&id=E">
+								<p>La semaine à partir de </p>
+								<p><span>313.00 €</span></p>
+							</li>
+							
+																					
+							<li class="dispo alien" data-href="index.php?page=dispo&id=E&src=vues/img/diapofiche/E/mini/T2AE-1.JPG">Disponibilités</li>
+											</ul>
+				</td>
+				<td class="resa lien pointer none1" data-id=E>
+					<a class="lien" href="mailto:?to=beatrice@activimage.net&subject=Demande%20de%20réservation%20du%20logement%20E%20(date%20non%20précisée)&body=message%20:........%0D%0ANom%20:......%0D%0ANombre%20de%20personnes%20:%20..........">Demande
+					</a>
+				</td>
+			</tr>							 		
+								<tr class="flextablogement" data-id=F>
+				<td class="detail pointer none1" data-href="index.php?page=fiche&id=F">
+										<p> <i class="fas fa-user"></i> 4</p>
+				</td>
+				<td class="detail pointer" data-href="index.php?page=fiche&id=F">
+					<ul class="alignegauche liendetail" data-id=F >
+						<li class="titre">T2 étage F</li>
+						<li class="none3"> <i class="fas fa-user"></i> 4</li>
+             		<li>T2 à l'étage, 1 chambre avec lit double, cuisine ouverte sur salon avec 1 canapé convertible, mezzanine avec 2 matelas simples + cellier  au rez-de-chaussée.</li>								
+						<li>Surface utile 51.00 m²</li>
+						<li class="pictos">
+							<img src="vues/img/pictos/litdouble.svg" class="picto lit2" alt="picto lit double"><img src="vues/img/pictos/litsimple.svg" class="picto" alt="picto lit simple"><img src="vues/img/pictos/litsimple.svg" class="picto" alt="picto lit simple">							<img src="vues/img/pictos/wifilight.svg" class="picto" alt="picto wifi">
+							<img src="vues/img/pictos/parkinglight.svg" class="picto" alt="picto parking">
+						</li>
+					</ul>
+				</td>
+				<td class="detail pointer none1" data-href="index.php?page=fiche&id=F">
+					<img src="vues/img/diapofiche/F/mini/T2BF-1.jpg"  alt="vignette"/>
+				</td>
+				<td class="detail pointer none2" data-href="index.php?page=fiche&id=F">
+					<img src="vues/img/diapofiche/F/mini/T2BF-2.jpg"  alt="vignette"/>
+				</td>
+				<td class="pointer">
+					<ul class="flex-colonne" data-id=F>
+													<li class="tarif detail pointer" data-href="index.php?page=fiche&id=F">
+								<p>La semaine à partir de </p>
+								<p><span>281.00 €</span></p>
+							</li>
+							
+																					
+							<li class="dispo alien" data-href="index.php?page=dispo&id=F&src=vues/img/diapofiche/F/mini/T2BF-1.jpg">Disponibilités</li>
+											</ul>
+				</td>
+				<td class="resa lien pointer none1" data-id=F>
+					<a class="lien" href="mailto:?to=beatrice@activimage.net&subject=Demande%20de%20réservation%20du%20logement%20F%20(date%20non%20précisée)&body=message%20:........%0D%0ANom%20:......%0D%0ANombre%20de%20personnes%20:%20..........">Demande
+					</a>
+				</td>
+			</tr>							 		
+								<tr class="flextablogement" data-id=G>
+				<td class="detail pointer none1" data-href="index.php?page=fiche&id=G">
+										<p> <i class="fas fa-user"></i> 4</p>
+				</td>
+				<td class="detail pointer" data-href="index.php?page=fiche&id=G">
+					<ul class="alignegauche liendetail" data-id=G >
+						<li class="titre">Studio G</li>
+						<li class="none3"> <i class="fas fa-user"></i> 4</li>
+             		<li>Grand studio + terrasse non attenante. Cuisine ouverte sur salon/séjour avec canapé convertible et coin nuit avec 1 lit double.</li>								
+						<li>Surface utile 30.45 m²</li>
+						<li class="pictos">
+							<img src="vues/img/pictos/litdouble.svg" class="picto lit2" alt="picto lit double">							<img src="vues/img/pictos/wifilight.svg" class="picto" alt="picto wifi">
+							<img src="vues/img/pictos/parkinglight.svg" class="picto" alt="picto parking">
+						</li>
+					</ul>
+				</td>
+				<td class="detail pointer none1" data-href="index.php?page=fiche&id=G">
+					<img src="vues/img/diapofiche/G/mini/stG-1.JPG"  alt="vignette"/>
+				</td>
+				<td class="detail pointer none2" data-href="index.php?page=fiche&id=G">
+					<img src="vues/img/diapofiche/G/mini/stG-2.JPG"  alt="vignette"/>
+				</td>
+				<td class="pointer">
+					<ul class="flex-colonne" data-id=G>
+													<li class="tarif detail pointer" data-href="index.php?page=fiche&id=G">
+								<p>La semaine à partir de </p>
+								<p><span>313.00 €</span></p>
+							</li>
+							
+																					
+							<li class="dispo alien" data-href="index.php?page=dispo&id=G&src=vues/img/diapofiche/G/mini/stG-1.JPG">Disponibilités</li>
+											</ul>
+				</td>
+				<td class="resa lien pointer none1" data-id=G>
+					<a class="lien" href="mailto:?to=beatrice@activimage.net&subject=Demande%20de%20réservation%20du%20logement%20G%20(date%20non%20précisée)&body=message%20:........%0D%0ANom%20:......%0D%0ANombre%20de%20personnes%20:%20..........">Demande
+					</a>
+				</td>
+			</tr>							 		
+								<tr class="flextablogement" data-id=H>
+				<td class="detail pointer none1" data-href="index.php?page=fiche&id=H">
+										<p> <i class="fas fa-user"></i> 4</p>
+				</td>
+				<td class="detail pointer" data-href="index.php?page=fiche&id=H">
+					<ul class="alignegauche liendetail" data-id=H >
+						<li class="titre">T2 avec terrasse H</li>
+						<li class="none3"> <i class="fas fa-user"></i> 4</li>
+             		<li>T2 RdC, 1 chambre avec  lit double, cuisine ouverte sur salon avec canapé convertible + terrasse de 12m²</li>								
+						<li>Surface utile 36.00 m²</li>
+						<li class="pictos">
+							<img src="vues/img/pictos/litdouble.svg" class="picto lit2" alt="picto lit double">							<img src="vues/img/pictos/wifilight.svg" class="picto" alt="picto wifi">
+							<img src="vues/img/pictos/parkinglight.svg" class="picto" alt="picto parking">
+						</li>
+					</ul>
+				</td>
+				<td class="detail pointer none1" data-href="index.php?page=fiche&id=H">
+					<img src="vues/img/diapofiche/H/mini/T2H-1.jpg"  alt="vignette"/>
+				</td>
+				<td class="detail pointer none2" data-href="index.php?page=fiche&id=H">
+					<img src="vues/img/diapofiche/H/mini/T2H-2.jpg"  alt="vignette"/>
+				</td>
+				<td class="pointer">
+					<ul class="flex-colonne" data-id=H>
+													<li class="tarif detail pointer" data-href="index.php?page=fiche&id=H">
+								<p>La semaine à partir de </p>
+								<p><span>351.00 €</span></p>
+							</li>
+							
+																					
+							<li class="dispo alien" data-href="index.php?page=dispo&id=H&src=vues/img/diapofiche/H/mini/T2H-1.jpg">Disponibilités</li>
+											</ul>
+				</td>
+				<td class="resa lien pointer none1" data-id=H>
+					<a class="lien" href="mailto:?to=beatrice@activimage.net&subject=Demande%20de%20réservation%20du%20logement%20H%20(date%20non%20précisée)&body=message%20:........%0D%0ANom%20:......%0D%0ANombre%20de%20personnes%20:%20..........">Demande
+					</a>
+				</td>
+			</tr>							 		
+								<tr class="flextablogement" data-id=I>
+				<td class="detail pointer none1" data-href="index.php?page=fiche&id=I">
+										<p> <i class="fas fa-user"></i> 6</p>
+				</td>
+				<td class="detail pointer" data-href="index.php?page=fiche&id=I">
+					<ul class="alignegauche liendetail" data-id=I >
+						<li class="titre">Maison T3 I</li>
+						<li class="none3"> <i class="fas fa-user"></i> 6</li>
+             		<li>Maison mitoyenne avec 1 chambre avec 2 lits doubles, 1 chambre avec 1 lit simple, salon-sejour-cuisine + une terrasse de 15 m²
+
+</li>								
+						<li>Surface utile 45.89 m²</li>
+						<li class="pictos">
+							<img src="vues/img/pictos/litdouble.svg" class="picto lit2" alt="picto lit double"><img src="vues/img/pictos/litdouble.svg" class="picto lit2" alt="picto lit double"><img src="vues/img/pictos/litsimple.svg" class="picto" alt="picto lit simple">							<img src="vues/img/pictos/wifilight.svg" class="picto" alt="picto wifi">
+							<img src="vues/img/pictos/parkinglight.svg" class="picto" alt="picto parking">
+						</li>
+					</ul>
+				</td>
+				<td class="detail pointer none1" data-href="index.php?page=fiche&id=I">
+					<img src="vues/img/diapofiche/I/mini/mI-1.jpg"  alt="vignette"/>
+				</td>
+				<td class="detail pointer none2" data-href="index.php?page=fiche&id=I">
+					<img src="vues/img/diapofiche/I/mini/mI-2.jpg"  alt="vignette"/>
+				</td>
+				<td class="pointer">
+					<ul class="flex-colonne" data-id=I>
+													<li class="tarif detail pointer" data-href="index.php?page=fiche&id=I">
+								<p>La semaine à partir de </p>
+								<p><span>363.00 €</span></p>
+							</li>
+							
+																					
+							<li class="dispo alien" data-href="index.php?page=dispo&id=I&src=vues/img/diapofiche/I/mini/mI-1.jpg">Disponibilités</li>
+											</ul>
+				</td>
+				<td class="resa lien pointer none1" data-id=I>
+					<a class="lien" href="mailto:?to=beatrice@activimage.net&subject=Demande%20de%20réservation%20du%20logement%20I%20(date%20non%20précisée)&body=message%20:........%0D%0ANom%20:......%0D%0ANombre%20de%20personnes%20:%20..........">Demande
+					</a>
+				</td>
+			</tr>							 		
+								<tr class="flextablogement" data-id=J>
+				<td class="detail pointer none1" data-href="index.php?page=fiche&id=J">
+										<p> <i class="fas fa-user"></i> 6</p>
+				</td>
+				<td class="detail pointer" data-href="index.php?page=fiche&id=J">
+					<ul class="alignegauche liendetail" data-id=J >
+						<li class="titre">Maison T3 J</li>
+						<li class="none3"> <i class="fas fa-user"></i> 6</li>
+             		<li>Maison mitoyenne avec 1 chambre avec 1 lit double + 1 lit simple, 1 chambre avec 1 lit simple, salon-sejour-cuisine + une terrasse de 15 m²</li>								
+						<li>Surface utile 47.10 m²</li>
+						<li class="pictos">
+							<img src="vues/img/pictos/litdouble.svg" class="picto lit2" alt="picto lit double"><img src="vues/img/pictos/litdouble.svg" class="picto lit2" alt="picto lit double"><img src="vues/img/pictos/litdouble.svg" class="picto lit2" alt="picto lit double">							<img src="vues/img/pictos/wifilight.svg" class="picto" alt="picto wifi">
+							<img src="vues/img/pictos/parkinglight.svg" class="picto" alt="picto parking">
+						</li>
+					</ul>
+				</td>
+				<td class="detail pointer none1" data-href="index.php?page=fiche&id=J">
+					<img src="vues/img/diapofiche/J/mini/mJ-1.jpg"  alt="vignette"/>
+				</td>
+				<td class="detail pointer none2" data-href="index.php?page=fiche&id=J">
+					<img src="vues/img/diapofiche/J/mini/mJ-2.jpg"  alt="vignette"/>
+				</td>
+				<td class="pointer">
+					<ul class="flex-colonne" data-id=J>
+													<li class="tarif detail pointer" data-href="index.php?page=fiche&id=J">
+								<p>La semaine à partir de </p>
+								<p><span>400.00 €</span></p>
+							</li>
+							
+																					
+							<li class="dispo alien" data-href="index.php?page=dispo&id=J&src=vues/img/diapofiche/J/mini/mJ-1.jpg">Disponibilités</li>
+											</ul>
+				</td>
+				<td class="resa lien pointer none1" data-id=J>
+					<a class="lien" href="mailto:?to=beatrice@activimage.net&subject=Demande%20de%20réservation%20du%20logement%20J%20(date%20non%20précisée)&body=message%20:........%0D%0ANom%20:......%0D%0ANombre%20de%20personnes%20:%20..........">Demande
+					</a>
+				</td>
+			</tr>							 		
+			</tbody>
+</table>
+			</div>
+		</section>
+	</div>
+</main>
+
+	
+
+		<footer>
+			<section id="ondininfo">
+				<h2>La Résidence des Ondines c'est :</h2>
+				<div class="flex">
+					<div class="flex-colonne info">
+						<img src="vues/img/pictos/famille.svg" alt="icone famille" />
+						<p>Un projet familial :<br>
+						Les parents pour la gestion,<br> les (grands)
+						enfants pour la communication</p>
+					</div>
+					<div class="vide"></div>
+					<div class="flex-colonne info">
+						<h3 id=compteur>680</h3>
+						<p>Personnes accueillies en 2018</p>
+					</div>
+					<div class="vide"></div>			
+					<div class="flex-colonne info">
+						<h3>7000</h3>
+						<p>Personnes accueillies depuis 2005</p>
+					</div>
+				</div>
+			</section>
+			<section id="mentions" class="flex-colonne">
+				<nav>
+					<a href="index.php?page=mentions">Mentions Légales</a>
+					<a href="index.php?page=contact">Nous contacter</a>
+				</nav>
+				<p class="gris">Site réalisé par Béatrice et Nolwenn, société ACTIVIMAGE</p>
+				<div class="gris flaticon">Icons made by <a class="gris" href="https://www.flaticon.com/authors/smalllikeart" title="smalllikeart">smalllikeart</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"             title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>		
+			</section>
+
+		</footer>
+	<!-- Java Script -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>		
+		<script src="vues/js/data.js" ></script>
+		<script src="vues/js/datepicker.js" ></script>
+		<script src="vues/js/ondines.js"></script>	
+		<script src="vues/js/diapo.js"></script>				
+
+	<script src="vues/js/accueil.js"></script>	
+</body>
+</html>

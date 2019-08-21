@@ -1,0 +1,295 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<title>RESIDENCE DES ONDINES</title>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>	
+	<link href="https://fonts.googleapis.com/css?family=Sniglet" rel="stylesheet"> 
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" crossorigin="anonymous">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="vues/css/ondines.css">
+	<link rel="stylesheet" type="text/css" href="vues/css/fiche.css">	
+</head>
+<body>
+	<header id="imgfond">
+		<nav id="menu">
+			<ul class="flex">
+				<li>
+					<a href="index.php?page=accueil" id="finfiche" class="pointer"><i class="fa fa-arrow-left picto" aria-hidden="true"></i> Retour page d'accueil</a>
+				</li>
+				<li id="liendispo">
+					<a class="dispo pointer" href="index.php?page=dispo&id=A"><img src="vues/img/pictos/calendar-page-with-many-squares.svg" class="picto" alt="picto planning"/><p>Disponibilité du logement</p></a>
+				</li>
+				<li>
+					<a href="mailto:?to=beatrice@activimage.net&subject=Demande%20d'information%20pour%20le%20logement%20A%20(Dates%20non%20précisées&body=votre%20message%20:"><i class="fa fa-envelope picto" aria-hidden="true"></i> Demande d'information
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main class="container">
+		<div id="titre1" class="flex">
+			  <!-- pas de flèche suivant si 1 seul logement disponible -->
+				<a class="fiche pointer flex1" href="routeur.php?page=fiche&id=J">&lt;</a>
+						<h2 class="fiche flex4">Descriptif T2 étage A </h2>
+			  <!-- pas de flèche suivant si 1 seul logement disponible -->			
+				<a class="fiche pointer flex1" href="routeur.php?page=fiche&id=B">&gt;</a>
+					</div>
+			
+		<section id="fichelogement">
+			<div id="titre2">
+					<!-- Affichage description -->
+				<p>T2 au premier étage avec 1 chambre avec lit double, une mezzanine avec 2 lits simples, une cuisine ouverte sur un salon/séjour avec canapé convertible. Cellier au RdC.
+</p>
+				<a href="#detail" class="lien">Détails ci-dessous</a>
+			</div>		
+			<!--  DIAPORAMA  -->
+			<section class="diaporama">
+				<ul class="flex posrelative diapo" data-id="0">
+																		<li class="grandformat posrelative">
+								<button type="submit" class="diapoprec pointer"> &lt; </button>
+								<img src="vues/img/diapofiche/A/A-Salon-1.JPG" alt="photo location">
+								<button type="submit" class="diaposuiv pointer"> &gt; </button>                         
+								<p class="legende">Salon</p>
+							</li>
+												<li class="petitformat" data-id="0">
+							<img src="vues/img/diapofiche/A/A-Salon-1.JPG" alt="photo location">
+							<p class="hidden legende">Salon</p>
+						</li>                   
+																	<li class="petitformat" data-id="1">
+							<img src="vues/img/diapofiche/A/A-Chambre-1.jpg" alt="photo location">
+							<p class="hidden legende">Chambre</p>
+						</li>                   
+																	<li class="petitformat" data-id="2">
+							<img src="vues/img/diapofiche/A/A-Chambre-2.jpg" alt="photo location">
+							<p class="hidden legende">Chambre</p>
+						</li>                   
+																	<li class="petitformat" data-id="3">
+							<img src="vues/img/diapofiche/A/A-Chambre-3.JPG" alt="photo location">
+							<p class="hidden legende">Chambre</p>
+						</li>                   
+																	<li class="petitformat" data-id="4">
+							<img src="vues/img/diapofiche/A/A-Cuisine-1.JPG" alt="photo location">
+							<p class="hidden legende">Cuisine</p>
+						</li>                   
+																	<li class="petitformat" data-id="5">
+							<img src="vues/img/diapofiche/A/A-Mezzanine.jpg" alt="photo location">
+							<p class="hidden legende">Mezzanine</p>
+						</li>                   
+																	<li class="petitformat" data-id="6">
+							<img src="vues/img/diapofiche/A/A-SDB-1.JPG" alt="photo location">
+							<p class="hidden legende">SDB</p>
+						</li>                   
+																	<li class="petitformat" data-id="7">
+							<img src="vues/img/diapofiche/A/A-SDB-2.JPG" alt="photo location">
+							<p class="hidden legende">SDB</p>
+						</li>                   
+																	<li class="petitformat" data-id="8">
+							<img src="vues/img/diapofiche/A/A-Salon-2.JPG" alt="photo location">
+							<p class="hidden legende">Salon</p>
+						</li>                   
+																	<li class="petitformat" data-id="9">
+							<img src="vues/img/diapofiche/A/A-Salon-3.JPG" alt="photo location">
+							<p class="hidden legende">Salon</p>
+						</li>                   
+									</ul>
+			</section>
+			<section id="detail">
+				<div class="flex">
+
+											
+					<!-- Affichage de la liste des informations -->
+					<div class="info flex">
+						<ul class="alignegauche">
+							<li>couchages</li> 
+																						<li>									
+									<p><i class="fa fa-check" aria-hidden="true"></i> Une chambre avec 1 lit double</p>
+								</li>
+															<li>									
+									<p><i class="fa fa-check" aria-hidden="true"></i> Mezzanine avec 2 lits simples</p>
+								</li>
+															<li>									
+									<p><i class="fa fa-check" aria-hidden="true"></i> Canapé convertible dans le salon</p>
+								</li>
+													</ul>
+					</div>					
+											
+					<!-- Affichage de la liste des informations -->
+					<div class="info flex">
+						<ul class="alignegauche">
+							<li>cuisine</li> 
+																						<li>									
+									<p><i class="fa fa-check" aria-hidden="true"></i> cafetière</p>
+								</li>
+															<li>									
+									<p><i class="fa fa-check" aria-hidden="true"></i> bouilloire</p>
+								</li>
+															<li>									
+									<p><i class="fa fa-check" aria-hidden="true"></i> grille-pain</p>
+								</li>
+															<li>									
+									<p><i class="fa fa-check" aria-hidden="true"></i> micro-ondes</p>
+								</li>
+															<li>									
+									<p><i class="fa fa-check" aria-hidden="true"></i> four</p>
+								</li>
+															<li>									
+									<p><i class="fa fa-check" aria-hidden="true"></i> plaques vitro céramique</p>
+								</li>
+													</ul>
+					</div>					
+											
+					<!-- Affichage de la liste des informations -->
+					<div class="info flex">
+						<ul class="alignegauche">
+							<li>salon</li> 
+																						<li>									
+									<p><i class="fa fa-check" aria-hidden="true"></i> Canapé convertible</p>
+								</li>
+															<li>									
+									<p><i class="fa fa-check" aria-hidden="true"></i> TV</p>
+								</li>
+															<li>									
+									<p><i class="fa fa-check" aria-hidden="true"></i> table</p>
+								</li>
+													</ul>
+					</div>					
+											
+					<!-- Affichage de la liste des informations -->
+					<div class="info flex">
+						<ul class="alignegauche">
+							<li>salle d'eau</li> 
+																						<li>									
+									<p><i class="fa fa-check" aria-hidden="true"></i> Douche</p>
+								</li>
+															<li>									
+									<p><i class="fa fa-check" aria-hidden="true"></i> Lavabo</p>
+								</li>
+															<li>									
+									<p><i class="fa fa-check" aria-hidden="true"></i> Toilettes</p>
+								</li>
+															<li>									
+									<p><i class="fa fa-check" aria-hidden="true"></i> Lave-linge</p>
+								</li>
+															<li>									
+									<p><i class="fa fa-check" aria-hidden="true"></i> Sèche-serviettes</p>
+								</li>
+													</ul>
+					</div>					
+											
+					<!-- Affichage de la liste des informations -->
+					<div class="info flex">
+						<ul class="alignegauche">
+							<li>divers</li> 
+																						<li>									
+									<p><i class="fa fa-check" aria-hidden="true"></i> parking privé gratuit</p>
+								</li>
+															<li>									
+									<p><i class="fa fa-check" aria-hidden="true"></i> local à vélos à disposition</p>
+								</li>
+															<li>									
+									<p><i class="fa fa-check" aria-hidden="true"></i> wifi gratuit</p>
+								</li>
+															<li>									
+									<p><i class="fa fa-check" aria-hidden="true"></i> location des draps/serviettes : 15€ par personne</p>
+								</li>
+													</ul>
+					</div>					
+									</div>	
+
+			</section>
+		</section>
+
+				<!-- Affichage des tarifs et des périodes-->
+		<section class="container-tarif flex">
+
+			<table id="tabtarif">
+				<thead>
+					<tr>
+						<th colspan="4">TARIFS (en €uros) </th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Période</td>						
+						<td>Nuit <br>(2 nuits<br>minimum)</td>
+						<td>Semaine</td>
+						<td>Week-end <br>(vendredi et samedi)</td>
+					</tr>
+					
+											<tr>
+							<td class="alignegauche">basse saison<span class="purple"> (1)</span></td>
+							<td>41.00</td>
+							<td>290.00</td>
+							<td>124.00</td>
+						</tr>
+											<tr>
+							<td class="alignegauche">moyenne saison<span class="purple"> (2)</span></td>
+							<td>46.00</td>
+							<td>322.00</td>
+							<td>138.00</td>
+						</tr>
+											<tr>
+							<td class="alignegauche">haute saison<span class="purple"> (3)</span></td>
+							<td>59.00</td>
+							<td>414.00</td>
+							<td>236.00</td>
+						</tr>
+											<tr>
+							<td class="alignegauche">très haute saison<span class="purple"> (4)</span></td>
+							<td>89.00</td>
+							<td>626.00</td>
+							<td></td>
+						</tr>
+					
+				</tbody>				
+			</table>
+
+			<section id="tabperiode">
+				<ul>
+											<li class="alignegauche">
+							<p><span class="purple"> (1)  </span> du 28/09/2019 au 28/03/2020</p>						</li>
+											<li class="alignegauche">
+							<p><span class="purple"> (2)  </span> du 30/03/2019 au 28/06/2019   et    du 31/08/2019 au 27/09/2019</p>						</li>
+											<li class="alignegauche">
+							<p><span class="purple"> (3)  </span> du 29/06/2019 au 12/07/2019   et    du 24/08/2019 au 30/08/2019</p>						</li>
+											<li class="alignegauche">
+							<p><span class="purple"> (4)  </span> du 13/07/2019 au 23/08/2019</p>						</li>
+									</ul>				
+			</section>
+
+			<section id="remarques">
+
+				<h4>Remarques</h4>
+				<p>Les prix sont indiqués hors charges (eau et électricité)</p>
+<!-- 				<p><i class="fa fa-paw" aria-hidden="true"></i>Les animaux sont admis sous conditions (nous contacter)</p> -->
+				<p>Le linge de maison n'est pas fourni</p>
+				
+			</section>
+
+		</section>
+
+	</main>
+
+	
+		<footer>
+			<section id="mentions">
+				<nav>
+					<a href="index.php?page=mentions">Mentions Légales</a>
+					<a href="index.php?page=contact">Nous contacter</a>
+				</nav>
+				<p class="gris">Site réalisé par Béatrice et Nolwenn, société ACTIVIMAGE</p>		
+			</section>
+
+		</footer>
+	<!-- Java Script -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>		
+		<script src="vues/js/data.js" ></script>
+		<script src="vues/js/ondines.js"></script>	
+		<script src="vues/js/diapo.js"></script>			
+		<script src="vues/js/fiche.js" ></script>
+
+	</body>
+</html>

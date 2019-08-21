@@ -1,0 +1,90 @@
+/*
+/*  M O B I L E    F I R S T
+/*
+/**********************
+ * STYLES GENERIQUES *
+ *********************/
+
+/*****************
+    PAGE CONTACT
+******************
+*/
+.container-contact div#contact {
+
+	display: inline-block;
+	padding: 2rem;
+	border: 0.5rem solid rgb(255,219,0);
+	border-radius: 0.5rem;
+}
+
+div#contact a {
+
+	color : black;
+}
+
+
+header {
+
+	text-align : center;
+	background-color: silver;
+	padding : 2rem;
+}
+
+
+
+/**********************************/
+/* F O R M A T    T A B L E T T E */
+/**********************************/
+
+ @media only screen and (min-width: 760px ) {
+
+
+/* ------------------------------------------->  HEADER 
+*/
+
+	/******************************
+	   PHOTOTHEQUE
+	*******************************
+	*/
+	section#diaporama {
+	width:60%;
+	}
+
+	#diaporama li  {
+	width: 33%;
+	}
+
+	/******************************
+	   ASIDE
+	*******************************
+	*/
+
+	aside {
+		width:35%;
+	}
+
+
+	/******************************
+		PAGE FICHE
+	*******************************
+	*/
+
+	#fichelogement section {
+
+		width : 45%;
+	}
+}
+
+/**********************************/
+/* F O R M A T    D E S K T O P   */
+/**********************************/
+
+ @media only screen and (min-width: 1025px ) {
+
+	
+	head {
+		position : relative;
+	}
+
+
+ }

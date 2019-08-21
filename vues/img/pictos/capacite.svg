@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1"
+	 id="Calque_1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 64 80"
+	 style="enable-background:new 0 0 64 80;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-width:4;}
+	.st1{fill:none;stroke:#000000;stroke-width:1.2825;stroke-linecap:round;}
+</style>
+<g>
+	<g transform="matrix(1.0257336,0,0,1.0469022,-0.88207442,-1.34511)">
+		<ellipse class="st0" cx="32.2" cy="31.8" rx="16.6" ry="16.9"/>
+		<path d="M31.5,13.7v17.4c0,0.3-0.3,0.6-0.6,0.6H13.5C13.5,21.8,21.6,13.7,31.5,13.7C31.5,13.7,31.5,13.7,31.5,13.7z"/>
+		<path d="M50.6,31.7H33.2c-0.3,0-0.6-0.3-0.6-0.6V13.7C42.5,13.7,50.6,21.8,50.6,31.7C50.6,31.7,50.6,31.7,50.6,31.7z M38.5,48.7
+			c-0.3,0.1-0.6,0.2-0.8,0.3C37.9,48.9,38.2,48.8,38.5,48.7z M36.8,49.2c-0.3,0.1-0.6,0.1-0.9,0.2C36.2,49.4,36.5,49.3,36.8,49.2z
+			 M35,49.5c-0.3,0-0.6,0.1-0.9,0.1C34.4,49.6,34.7,49.6,35,49.5z"/>
+	</g>
+</g>
+<g>
+	<circle cx="26" cy="36" r="2"/>
+	<circle cx="38.2" cy="36" r="2"/>
+	<path class="st1" d="M29.3,42.7c0.9,0.5,1.9,0.7,2.9,0.7c1,0,2-0.3,2.8-0.7"/>
+</g>
+</svg>

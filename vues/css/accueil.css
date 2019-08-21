@@ -1,0 +1,710 @@
+/*
+/*  M O B I L E    F I R S T
+/*
+/**********************
+ * STYLES GENERIQUES *
+ *********************/
+
+.container {
+
+ 	width: 90%;
+ 	background-color: white;
+ 	margin: 0 auto;
+}
+
+.none1 {
+	
+	display: none;
+
+}
+
+/**************
+     HEADER
+***************
+*/
+
+header#imgfond {
+
+	text-align : center;
+	background-image: url('../img/header4.jpg');
+	background-repeat : no-repeat;
+	background-size: cover;
+	padding-top: 0.5rem;
+	padding-bottom: 4rem;
+	margin-bottom: 2rem;
+}
+
+
+header nav a:hover {
+
+	color : rgb(255,219,0);			
+}
+
+nav#menu .flex {
+
+	display : flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-items: center;	
+}	
+
+
+div#nav nav {
+
+	position: fixed;
+	top: 0;
+	left:0;
+	background-color: rgba(170,170,170,0.9);
+	z-index: 99;
+	border-radius: 1rem;
+	width: 20rem;
+}
+
+div#nav nav li {
+
+	font-size: 6rem;
+	line-height: 3rem;
+}
+
+div#nav nav i.fa-arrow-left {
+
+	font-size: 3rem;
+}
+
+div#nav nav li a {
+
+	font-size: 2rem;
+}
+
+div#nav nav ul {
+
+	list-style-type: none;
+	padding-left: 0;
+	margin : 0;
+}
+
+header h1 {
+
+	color : rgb(255,219,0);
+	font-size: 4.5rem;
+	margin-top: 2rem;
+	margin-bottom: 0;
+}
+
+
+header h2 {
+
+	color : white;
+	font-size: 3rem;
+	font-weight: normal;
+	margin-top: 0;
+	margin-bottom: 4rem;
+}
+
+div#nav div {
+
+	position: fixed;
+	left: 0;
+	top: 2px;
+	padding-left: 2rem;
+	
+	margin-top: 2rem;
+
+}
+
+div#nav div img {
+
+	width : 3rem;
+
+}
+
+
+/********************************************
+  FORMULAIRE de recherche des disponibilités
+*********************************************
+*/
+
+form#recherche {
+/*	margin-top : 2rem;*/
+	padding : 2rem;
+	justify-content: center;
+	width : 60%;
+	margin : 0 auto;
+
+}
+
+fieldset {
+	border : none;
+	width: 80%;
+	color: white;
+}
+
+#recherche label {
+	display: inline-block;
+	text-align: left;
+	width : 15%;
+}
+
+#recherche input {
+	display: inline-block;
+	width : 70%;
+	text-align: left;
+	border-bottom: 3px solid white;
+	background-color: transparent;
+	color : white;
+	font-size: 1.5rem;
+	font-weight: bold;
+	cursor: default;
+
+}
+
+#recherche button {
+	margin-top: 2rem;
+	background: rgb(255,219,0);
+	border : none;
+	font-size: 1.5rem;
+	font-weight: bold;
+	border-radius: 3rem;
+	padding : 1.5rem;
+}
+
+#recherche button:hover {
+	background: linear-gradient(#000, #DB0);
+	color: white;
+	cursor: pointer;
+}
+
+@keyframes attente {
+  0%   {color:white;}
+  10%   {color:rgb(255,219,0);}
+  15%   {color:white;}
+  20%  {color:rgb(255,219,0);}
+  25%  {color:white;}
+  30%  {color:rgb(255,219,0);}
+  35%  {color:white;}
+  40%  {color:rgb(255,219,0);}
+  45%  {color:white;}
+  50%  {color:rgb(255,219,0);}
+  55%  {color:white;}
+  60%  {color:rgb(255,219,0);}
+  65%  {color:white;}
+  70%  {color:rgb(255,219,0);}
+  75%  {color:white;}
+  80%  {color:rgb(255,219,0);}
+  85%  {color:white;}
+  90%  {color:rgb(255,219,0);}
+  95%  {color:white;}
+  100% {color:rgb(255,219,0);}
+}
+
+header h3 {
+
+	color : rgb(255,219,0);
+	font-size : 2rem;
+}
+
+header h3.attente {
+
+	animation-name: attente;
+  	animation-duration: 5s;
+
+}
+
+
+/******************************
+   MAIN
+ ******************************
+ */
+
+ div#main1 {
+
+ 	justify-content: center;
+
+ }
+
+/******************************
+   ASIDE
+*******************************
+*/
+
+aside {
+
+	width:90%;
+	margin: 0 auto;
+}
+
+iframe {
+
+	width: 310px;
+	height: 175px;
+	border:0;
+}
+
+.picto.voiture {
+
+	padding-top: 1.5rem;
+}
+
+/*********************
+ section PRESENTATION
+**********************
+*/
+
+#presentation {
+
+	width: 90%;
+	margin: 0 auto;
+}
+
+#presentation ul {
+	
+	font-size: 1.3rem;
+	font-weight: bold;
+}
+
+#presentation li img {
+	
+	display: inline-block;
+	width: 5rem;
+	font-weight: bold;
+	float: left;
+
+}
+
+#presentation li p {
+	
+	display: inline-block;
+	font-weight: bold;
+	padding-left: 4rem;
+}
+
+#presentation li {
+	
+/*	width : 100%;*/
+	text-align: left;
+
+}
+
+/******************
+LISTE DES LOGEMENTS
+*******************
+*/
+
+tr.flextablogement {
+
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: stretch;
+}
+
+tr.flextablogement td {
+
+	margin: auto;
+
+}
+
+.prix {
+
+	color : white;
+	padding : 0.3rem;
+	font-size: 2rem;
+	background-color: rgb(255,219,0);
+}
+
+
+section#logements {
+
+	margin-top : 5rem;
+}
+
+section#logements h2 {
+
+	font-size: 3rem;
+	font-weight: bold;
+
+}
+
+section#logements h2 span {
+
+	color : rgb(255,219,0);
+
+}
+
+#listlogements table {
+	
+	border-collapse: collapse;
+	margin-top: 1.5rem;
+	font-size: 1.5rem;
+}
+
+#listlogements table td tr {
+
+	cursor:pointer;
+
+}
+
+#listlogements th i {
+
+	font-size: 2rem;
+}
+
+#listlogements table tr td:first-child {
+
+	text-align: center;
+
+}
+
+#listlogements table td {
+
+	padding: 1rem 1.25rem;
+}
+
+#listlogements table td ul.flex-colonne {
+
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+
+#listlogements table tr:hover {
+
+	background-color : rgba(200,200,200,0.2);
+}
+
+#listlogements ul {
+
+	padding-left: 1rem;
+}
+
+#listlogements li.titre {
+
+	font-weight: bold;
+	padding-bottom: 1rem;
+
+	transition : background-color 1s, font-size 1s;
+} 
+
+#listlogements table tr:hover li.titre {
+
+	background-color : rgb(255,219,0);
+	border-radius: 1rem;
+	padding-left: 0.5rem;
+
+}
+
+
+#listlogements li a {
+
+	color: black;
+}
+
+#listlogements li.tarif {
+
+	font-size : 1.2rem;
+}
+
+#listlogements li.tarif p {
+
+	margin : 0;
+	padding: 0 1rem;
+}
+
+
+#listlogements li.tarif span {
+
+	padding: 0.2rem 0.4rem;
+	font-weight:  : bold;
+	color: rgb(255,219,0);
+	background-color: black;
+	font-size: 1.6rem;
+	line-height: 3rem;
+}
+
+
+td.none1, td.none2, ul.none1 {
+	
+	display: none;
+
+}
+
+#listlogements table li img.lit2 {
+
+	margin-right: 1rem;
+}
+
+#listlogements a.btnrazdat {
+
+	margin-left: 0.5rem;
+} 
+
+
+div#listlogements {
+	margin-bottom: 5rem;
+}
+
+img.picto {
+
+	width : 2rem;
+}
+
+li.soustitre {
+
+	color:purple;
+	font-size: 1.5rem;
+}
+
+li.soustitre ul {
+
+	color:silver;
+	font-size: 1rem;
+}
+
+/****************
+    FOOTER
+*****************
+*/
+footer p {
+
+	font-weight: bold;
+	font-size: 1.5rem;
+	margin : 0 auto;
+}
+
+footer h2 {
+
+	font-size: 3rem;
+}
+
+footer h3 {
+
+	font-size: 6rem;
+	line-height: 0;
+	margin : 5rem auto;
+}
+
+footer section#ondininfo {
+	background-color : rgb(255,219,0);
+	color : black;
+	margin-top: 2rem;
+	padding : 2.5rem 0 3rem;
+}
+
+
+footer section#ondininfo img {
+
+	display : block;
+	width: 6rem;
+	margin : 1rem auto;
+
+}
+
+footer section#ondininfo div div:nth-child(2n) {
+
+	border-left: 1px solid black;
+	opacity : 0.1;
+}
+
+footer section#mentions {
+
+	background-color : #222;
+	padding-bottom: 3rem;
+}
+
+footer section#mentions a {
+
+	color : white;
+}
+
+footer section#mentions a:hover{
+	background-color : black;
+	color : rgba(255,219,0,1);						
+}
+
+footer nav {
+
+	padding: 3rem;
+	margin : 0 auto;
+}
+
+/**********************************/
+/* F O R M A T    T A B L E T T E */
+/**********************************/
+
+@media only screen and (min-width: 760px ) {
+
+
+/* ------------------------------------------->  HEADER 
+*/
+
+	nav.none1 {
+	
+		display: inline-block;
+	}
+
+	 nav.none3 {
+	
+		display: none;
+	}
+
+	nav#menu .flex {
+	
+	flex-direction: row;
+
+	}	
+
+	#recherche fieldset {
+
+		width: 45%;
+
+	}
+
+	#recherche label {
+		display: inline-block;
+		text-align: left;
+		width : 70%;
+	}
+
+	/******************************
+	   ASIDE
+	*******************************
+	*/
+/*	aside {
+
+		width:35%;
+	}*/
+
+	iframe {
+
+		width: 500px;
+		height: 437px;
+		border:0;
+	}
+
+	/******************************
+		LISTE LOGEMENTS
+	*******************************
+	*/
+
+	#listlogements table td {
+
+		padding: 2.5rem 2rem;
+	}
+
+	
+
+	tr.flextablogement {
+
+		flex-wrap: nowrap;
+	}
+
+
+	#listlogements table td ul.flex-colonne {
+
+		flex-wrap: wrap;
+
+	}
+
+
+	#listlogements table td.none1 {
+	
+		display: inline-block;
+	}
+
+	#listlogements table td li.none3, .none3 {
+	
+		display: none;
+	}
+
+	#listlogements table tr:nth-child(n+2) {
+	
+	border-top: 0.8px solid #DDD;
+
+	}
+
+}
+
+/**********************************/
+/* F O R M A T    D E S K T O P   */
+/**********************************/
+
+ @media only screen and (min-width: 1025px ) {
+
+	.container {
+
+	 	max-width: 1100px;
+	 	margin: 0 auto;
+	 	
+	}
+
+	head {
+		position : relative;
+	}
+
+	nav a {
+
+		width : 15%;
+	}
+
+
+	/******************************
+	   DIAPORAMA
+	*******************************
+	*/
+	section.diaporama {
+
+		width:60%;
+	}
+
+	.diaporama li.petitformat  {
+
+		width: 24%;
+	}
+
+	.diaporama li p.legende span {
+
+		display : inline;
+	}
+
+	.diaporama li.petitformat  {
+
+		width: 19%;
+	}
+
+
+	/******************************
+	   ASIDE
+	*******************************
+	*/
+	aside {
+
+		width:35%;
+		margin-left: 3rem;
+
+	}
+
+	iframe {
+
+		width: 400px;
+		height: 350px;
+		border:0;
+	}
+
+
+	/******************
+	LISTE DES LOGEMENTS
+	******************
+	*/
+	#listlogements table  {
+		
+		min-width: 800px;
+
+	}
+
+	#listlogements table td.none2 {
+	
+		display: inline-block;
+	}
+
+
+ }

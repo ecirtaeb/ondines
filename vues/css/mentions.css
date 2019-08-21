@@ -1,0 +1,47 @@
+/*
+/*  M O B I L E    F I R S T
+/*
+/**********************
+ * STYLES GENERIQUES *
+ *********************/
+
+/**************************
+    PAGE MENTIONS LEGALES
+***************************
+*/
+.container {
+
+	max-width: 1100px;
+	margin : 2rem auto;
+	text-align: left;
+}
+
+header {
+
+	text-align : center;
+	background-color: silver;
+	padding : 2rem;
+}
+
+h1 {
+
+	text-align: center;
+}
+
+h2, h3 {
+
+	margin-top: 2rem;
+}
+
+
+section#infos div p {
+
+	margin-left: 2rem;
+}
+
+p a {
+
+	color : silver;
+}
+
+

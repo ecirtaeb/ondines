@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg">
+
+			
+<!-- 		<circle opacity="0.8" fill="blue" stroke-width="2" cx="200" cy="400" r="60" /> 	
+		<circle opacity="0.6" fill="blue" stroke-width="2" cx="400" cy="400" r="50" />  -->	
+		<circle opacity="0.4" fill="blue" stroke-width="2" cx="15" cy="30" r="5" /> 	
+		<circle opacity="0.2" fill="blue" stroke-width="2" cx="25" cy="30" r="3" /> 	
+<!-- 		<ellipse opacity="0.8" fill="yellow" stroke-width="2" cx="600" cy="50" rx="20" ry="10" />  -->
+	
+		<ellipse opacity="0.5" fill="olive" stroke-width="2" cx="25" cy="20" rx="18" ry="5" /> 
+<!-- 	
+  		<polygon style="fill:black;stroke:purple;stroke-width:1" points="50,0 0,5 10,150" />	
+  		<polygon style="fill:silver;stroke:purple;stroke-width:1" points="510,0 120,150 200,180" />	
+  		<polygon style="fill:brown;stroke:purple;stroke-width:1" points="400,350 120,150 200,180" /> -->
+
+	</svg>

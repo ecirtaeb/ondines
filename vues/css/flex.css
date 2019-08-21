@@ -1,0 +1,36 @@
+
+.flex {
+	display : flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: stretch;	
+}	
+
+tr td:first-child {
+
+	width : 10%;
+}
+
+tr td:nth-child(2) {
+
+	width : 90%;
+}
+
+tr td:nth-child(n+3) {
+
+	width : 50%;
+}
+
+
+/**********************************/
+/* F O R M A T    T A B L E T T E */
+/**********************************/
+
+@media only screen and (min-width: 760px ) {
+
+
+	.flex {
+
+		flex-wrap : nowrap;
+	}

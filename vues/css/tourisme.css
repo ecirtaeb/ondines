@@ -1,0 +1,223 @@
+/*
+/*  M O B I L E    F I R S T
+/*
+/**********************
+ * STYLES GENERIQUES *
+ *********************/
+
+
+.container {
+
+ 	max-width: 1000px;
+ 	background-color: white;
+ 	margin: 0 auto;
+}
+
+h1 {
+
+	font-size: 4rem;
+	color : #AAA;
+	padding-left: 1rem 2rem;
+	margin: 0 auto;
+/*	text-shadow: -1px -1px white, 1px 1px white, -3px 0 4px white;*/
+
+}
+
+h2 {
+	display : inline-block;
+	padding: 2rem 1rem;
+	font-size: 3rem;
+	color : black;
+}
+
+h3 {
+
+ 	margin: 0;
+ 	font-size: 1.5rem;
+ }
+
+
+/**************
+     HEADER
+***************
+*/
+
+header {
+
+	text-align : center;
+	background-color: silver;
+	padding : 2rem;
+}
+
+header nav {
+
+	margin-bottom: 1rem;
+}
+
+/******************************
+   MAIN
+ ******************************
+ */
+
+ div#main1 {
+
+ 	justify-content: center;
+
+ }
+
+/******************************
+   DIAPORAMAS
+*******************************
+*/
+/*
+.diaporama {
+
+	width:90%;
+}
+
+.diaporama ul {
+
+	padding-bottom: 2rem;
+}
+
+.diaporama li.grandformat {
+
+	width: 100%;
+	position: relative;
+}
+
+.diaporama li.grandformat p {
+
+	position: absolute;
+	top:10px;
+	left:10px;
+
+}
+
+.diaporama li.grandformat p.legende {
+
+	padding: 0.5rem;
+	background-color: white;
+	color: rgb(70,70,70);
+	border-radius: 1rem;
+}
+
+
+.diaporama li.grandformat button {
+
+    position : absolute;
+    font-size: 4rem;
+    font-weight: normal;
+    background-color: rgba(255,219,0,0.7);
+    border : none;
+    color : white;
+    padding: 2rem 1rem;
+    top : 40%;
+
+}
+
+.diaporama li.grandformat button:hover {
+
+	display: block;
+
+}
+
+
+button.diaposuiv {
+
+	border-radius: 1rem 0 0 1rem;
+	right : 0;
+}
+
+button.diapoprec {
+
+	border-radius: 0 1rem 1rem 0;
+
+}
+	
+.diaporama li:first-child {
+
+	margin-bottom: 2rem;
+}
+
+
+.diaporama li.petitformat{
+
+	width: 48%;
+	cursor:pointer;
+	margin : 0 auto;
+}
+
+
+.diaporama li img {
+
+	width: 100%;
+
+}
+*/
+
+/**********************************/
+/* F O R M A T    T A B L E T T E */
+/**********************************/
+
+ @media only screen and (min-width: 760px ) {
+
+
+/* ------------------------------------------->  HEADER 
+*/
+	
+	/****************
+	    DIAPORAMAS
+	*****************
+	*/
+
+	section.diaporama {
+
+		width:80%;
+		margin: 0 auto;
+	}
+
+	.diaporama li  {
+
+		width: 33%;
+	}
+
+	.diaporama li.grandformat {
+
+	width: 100%;
+}
+
+	/******************************
+	   ASIDE
+	*******************************
+	*/
+
+	aside {
+		width:35%;
+	}
+
+}
+
+/**********************************/
+/* F O R M A T    D E S K T O P   */
+/**********************************/
+
+ @media only screen and (min-width: 1025px ) {
+
+	
+	head {
+		position : relative;
+	}
+
+	section.diaporama {
+
+		width: 70%;
+		margin: 0 auto;
+	}
+
+	.diaporama li.petitformat  {
+
+		width: 19%;
+	}
+
+ }

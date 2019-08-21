@@ -1,0 +1,28 @@
+table, td, th {
+   border: 1px solid black;
+   border-collapse: collapse;
+   text-align: center;
+}
+
+th { border-bottom-width: 2px; }
+tr:nth-child(even){ background-color: #eee; }
+
+@media (max-width: 40em) {
+   table, tbody { display: block; }
+   tr {
+      display: table;
+      width: 100%;
+   }
+   th {
+      font-size: 0;
+      border: none;
+      visibility: hidden;
+   }
+   td, th { display: table-row; }
+   td:before {
+      content: attr(data-headers);
+      display: table-cell;
+      width: 60%;
+      border-right:  1px solid black;      
+   }
+}

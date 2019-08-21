@@ -1,0 +1,438 @@
+/*
+/*  M O B I L E    F I R S T
+/*
+/**********************
+ * STYLES GENERIQUES *
+ *********************/
+
+* {
+ 	box-sizing: border-box;	
+ }
+
+.container {
+
+ 	max-width: 1100px;
+ 	background-color: white;
+ 	margin: 2rem auto;
+}
+
+.flex {
+
+	align-items: flex-start;	
+}
+
+.flex-colonne {
+
+	align-items: center;	
+}
+
+
+i.fa-check {
+
+	font-size: 1rem;
+}
+
+
+/**************
+     HEADER
+***************
+*/
+
+
+header {
+
+	text-align : center;
+	background-color: silver;
+	padding : 2rem;
+}
+
+header nav a:hover {
+
+	color : rgb(255,219,0);			
+}
+
+
+header h1 {
+
+	color : rgb(255,219,0);
+	font-size: 4.5rem;
+	margin-top: 2rem;
+	margin-bottom: 0;
+}
+
+header h2 {
+
+	color : white;
+	font-size: 3rem;
+	font-weight: normal;
+	margin-top: 0;
+	margin-bottom: 4rem;
+}
+
+nav a img {
+
+	font-size: 1.5rem;
+	padding : 5px;
+	color : white;
+
+}
+
+nav ul li a .picto {
+
+	margin-right: 2rem;
+}
+
+li#liendispo {
+
+	vertical-align: top;
+}
+
+
+li#liendispo img, li#liendispo p {
+
+	display: inline-block;
+	margin : 0;
+	vertical-align: top;
+}
+
+
+/******************************
+   MAIN
+ ******************************
+ */
+
+#fichelogement>div {
+
+	width: 80%;
+	margin: 0 auto;
+}
+
+div#titre1 {
+
+max-width : 95%;
+margin: 0 auto;
+
+} 
+
+div#titre1 a.fiche {
+
+	padding: 1rem 2rem;
+	background-color: silver;
+	color: black;
+	font-size: 3rem;
+	width : 10%;
+	border-radius: 2rem;
+}
+
+div#titre1 h2.fiche {
+
+	width: 50%
+}
+
+div#titre2 p {
+
+	margin : 2rem 0;
+}
+
+
+/*****************************
+    FICHE INFO APPARTEMENT
+******************************
+*/
+
+
+section#fichelogement>div {
+
+	margin-bottom: 1.5rem;
+}
+
+span#prix {
+
+	color : white;
+	padding : 0.3rem;
+	font-size: 2rem;
+	background-color: rgb(255,219,0);
+}
+
+div.info ul li:first-child {
+
+	text-align: center;
+	font-size: 2rem;
+	padding-top: 2rem;
+}
+
+section#detail div.flex {
+
+	justify-content: space-around;
+}
+
+a.detail {
+
+	margin-top: 2rem;
+}
+
+
+/*  Tableaux des tarifs et périodes */
+
+.container-tarif {
+
+/*	width : 100%;*/
+	margin : 2rem 0;
+	justify-content: flex-end;
+}
+
+table#tabtarif, section#tabperiode, section#remarques {
+
+	width: 90%;
+	margin : 0.5rem auto;
+}
+
+table#tabtarif{
+
+	border : 2px solid rgb(255,219,0);
+	border-radius: 5px;
+}
+
+
+table#tabtarif th {
+	
+	background-color : rgba(211,211,211,0.8);
+	font-weight: normal;
+	padding: 0.5rem 0;
+}
+
+table#tabtarif  td {
+	padding: 5px 2px;
+	text-align: center;
+}
+
+table#tabtarif  tr:first-child {
+	background-color : rgba(211,211,211,0.5);
+
+}
+
+
+table#tabtarif  tr:nth-child(n+2) td:nth-child(1) {
+
+	padding-left: 2rem;
+	text-align: left;
+
+}
+
+
+	section#tabperiode, section#remarques {
+
+		width : 35%;
+		margin : 0 auto;
+	}
+
+
+/****************
+    FOOTER  
+*****************
+*/
+footer p {
+
+	font-weight: bold;
+	font-size: 1.5rem;
+	margin : 0 auto;
+}
+
+footer h2 {
+
+	font-size: 3rem;
+}
+
+footer h3 {
+
+	font-size: 6rem;
+	line-height: 0;
+	margin : 5rem auto;
+}
+
+footer section#ondininfo {
+	background-color : rgb(255,219,0);
+	color : black;
+	margin-top: 2rem;
+	padding : 2.5rem 0 3rem;
+}
+
+footer section#ondininfo img {
+
+	display : block;
+	width: 6rem;
+	margin : 1rem auto;
+
+}
+
+footer section#ondininfo>div {
+
+	text-align: center;
+	width : 75%;
+	margin: 0 auto;
+
+}
+
+footer section#ondininfo div div:nth-child(2n) {
+
+	border-left: 1px solid black;
+	opacity : 0.1;
+}
+
+footer section#mentions {
+
+	background-color : #222;
+	padding-bottom: 3rem;
+}
+
+footer section#mentions a {
+
+	color : white;
+}
+
+footer section#mentions a:hover{
+	background-color : black;
+	color : rgba(255,219,0,1);						
+}
+
+footer nav {
+
+	padding: 3rem;
+	margin : 0 auto;
+}
+
+/**********************************/
+/* F O R M A T    T A B L E T T E */
+/**********************************/
+
+ @media only screen and (min-width: 760px ) {
+
+
+ 	.container {
+
+	 	width: 90%;
+
+	}
+ 	/******************************
+ 	   HEADER
+ 	*******************************
+ 	*/
+
+ 	nav li {
+
+	width : 33%;
+
+	}
+
+
+ 	/******************************
+ 	   MAIN
+ 	*******************************
+ 	*/
+
+
+	 div#titre1 {
+
+		max-width : 80%;
+		margin: 0 auto;
+	 }
+
+	 div.fiche {
+
+		width : 40%;
+
+	 }
+
+	/******************************
+	   DIAPORAMA
+	*******************************
+	*/
+	section.diaporama {
+
+		width:60%;
+		margin : 0 auto;
+	}
+
+	.diaporama li  {
+
+		width: 33%;
+		margin : 0 auto;
+	}
+
+	/******************************
+	  FICHE INFO APPARTEMENT
+	*******************************
+	*/
+	div.info h3 {
+
+		text-align: left;
+		padding-left: 5rem;
+	}
+
+	div.info li {
+
+		padding-left: 4rem;
+	}
+
+	/******************************
+	  TABLEAUX TARIF et PERIODE
+	*******************************
+	*/
+
+	section#tabperiode, section#remarques {
+
+		width : 35%;
+		margin : 0 auto;
+		font-size: 1.3rem;
+	}
+
+		table#tabtarif  tr:nth-child(n+2) td:nth-child(1) {
+
+		padding-left: 5rem;
+
+}
+
+}
+
+/**********************************/
+/* F O R M A T    D E S K T O P   */
+/**********************************/
+
+ @media only screen and (min-width: 1025px ) {
+
+	
+	.flex-colonne {
+
+		align-items: flex-start;	
+	}		
+
+	head {
+		position : relative;
+	}
+
+	section#detail div.info {
+
+		width : 33%;
+		padding: 2rem 3rem;
+	}
+
+	/******************************
+	   DIAPORAMA
+	*******************************
+	*/
+	section.diaporama {
+
+		width:75%;
+		margin: 0 auto;
+
+	}
+
+
+	.diaporama li.petitformat{
+
+		width: 19%;
+		cursor:pointer;
+	}
+
+
+ }

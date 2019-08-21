@@ -1,0 +1,43 @@
+
+CREATION TABLE
+---------------
+	CREATE TABLE `ondines`.`periode` ( `id` INT(2) NOT NULL AUTO_INCREMENT , `datedebut` DATETIME NOT NULL , `datefin` DATETIME NOT NULL ,`libelle` VARCHAR(50) NOT NULL , PRIMARY KEY (`id`)) ENGINE = MyISAM;
+
+SUPPRESSION TABLE
+-----------------
+	DROP TABLE periode
+
+INSERTION LIGNE
+---------------
+	INSERT INTO `periode` (`id`, `datedebut`, `datefin`, `libelle`) VALUES (NULL, '2018-09-29 00:00:00', '2019-03-29 00:00:00', 'Basse saison'), (NULL, '2019-03-30 00:00:00', '2019-06-28 00:00:00', 'Moyenne saison'), (NULL, '2019-06-29 00:00:00', '2019-07-12 00:00:00', 'Haute saison'), (NULL, '2019-08-24 00:00:00', '2019-08-30 00:00:00', 'Haute saison'), (NULL, '2019-07-13 00:00:00', '2019-08-23 00:00:00', 'Très haute saison'), (NULL, '2019-08-31 00:00:00', '2020-03-27 00:00:00', 'Moyenne saison');
+
+	INSERT INTO `tarif` (`id`, `id_periode`, `id_logement`, `tarif_jour`, `tarif_we`, `tarif_semaine`)
+	VALUES 
+	(NULL, '8', 'A', '46', '69', '322'),
+	(NULL, '9', 'A', '59', '118', '414'),
+	(NULL, '10', 'A', '59', '118', '414'),	
+	(NULL, '11', 'A', '83', NULL', '580'),
+	(NULL, '12', 'A', '46', '69', '322');
+
+
+	INSERT INTO `tarif` (`id`, `id_periode`, `id_logement`, `tarif_jour`, `tarif_we`, `tarif_semaine`)
+	VALUES 
+(NULL, '7', 'B', '35', '53', '245'),
+ (NULL, '8', 'B', '39', '58', '272'),
+ (NULL, '9', 'B', '50', '100', '350'),
+ (NULL, '10', 'B', '50', '100', '350'),
+ (NULL, '11', 'B', '70', NULL', '490'),
+ (NULL, '12', 'B', '39', '58', '272');
+
+
+	INSERT INTO `tarif` (`id`, `id_periode`, `id_logement`, `tarif_jour`, `tarif_we`, `tarif_semaine`)
+	VALUES 
+(NULL, '7', 'I', '52', '78', '363'),
+ (NULL, '8', 'I', '58', '86', '403'),
+ (NULL, '9', 'I', '74', '148', '518'),
+ (NULL, '10', 'I', '74', '148', '518'),
+ (NULL, '11', 'I', '104', NULL, '725'),
+ (NULL, '12', 'I', '58', '86', '403');
+
+
+*/
